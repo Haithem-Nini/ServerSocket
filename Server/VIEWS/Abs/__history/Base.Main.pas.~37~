@@ -1,0 +1,73 @@
+unit Base.Main;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.ComCtrls,
+  Vcl.Menus,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.StdCtrls,
+  Vcl.Buttons,
+  Vcl.ExtCtrls,
+  System.Win.ScktComp;
+
+type
+  TBase_Main = class(TForm)
+//  {$REGION '  Components ...'}
+  {$REGION ''}
+    Edt_Port: TEdit;
+    Label1: TLabel;
+    Btn_ServerSwitcher: TBitBtn;
+    LV_Clients: TListView;
+    StatusBar_APP: TStatusBar;
+    Pnl_Caption: TPanel;
+    Pnl_Client: TPanel;
+  private
+    fUpdateUI: TProc;
+    fPort: Integer;
+    procedure Set_Port(const Value: Integer);
+    function GetUpdateUI(const aValue: Boolean): TProc;
+
+    { Private declarations }
+  protected
+//    procedure SetUpdateUI(const aValue: Boolean; const aProc: TProc); virtual; abstract;
+  public
+    { Public declarations }
+//    property UpdateUI[const aValue: Boolean]: TProc read GetUpdateUI write SetUpdateUI;
+    property Port: Integer Read fPort write Set_Port;
+  end;
+
+//var
+//  Base_Main: TBase_Main;
+
+implementation
+//
+//uses
+//  CMD_Dialect,
+//  URemote.Desktop,
+//  Udm.UX;
+
+{$R *.dfm}
+
+{ TBase_Main }
+
+function TBase_Main.GetUpdateUI(const aValue: Boolean): TProc;
+begin
+  Result := GetUpdateUI(aValue);
+end;
+
+procedure TBase_Main.Set_Port(const Value: Integer);
+begin
+//  fPort := Value;
+  fPort := StrToInt(Edt_Port.Text);
+end;
+
+end.

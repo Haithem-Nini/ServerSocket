@@ -1,0 +1,46 @@
+unit UMain;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.ComCtrls,
+  Vcl.StdCtrls,
+  Vcl.Buttons,
+  Vcl.ExtCtrls,
+// Base ANECTOR
+  Base.Main;
+
+type
+  TFrmMain = class(TBase_Main)
+  private
+    { Private declarations }
+  protected
+    function GetSelf: TBase_Main; override;
+  public
+    { Public declarations }
+  end;
+
+//var
+//  FrmMain: TFrmMain;
+
+implementation
+
+{$R *.dfm}
+
+{ TFrmMain }
+
+function TFrmMain.GetSelf: TBase_Main;
+begin
+  Result := TFrmMain(Self);
+end;
+
+end.

@@ -102,11 +102,28 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="Main.pas">
-            <Form>UMain</Form>
+        <DCCReference Include="..\API\CMD_Dialect.pas"/>
+        <DCCReference Include="VIEWS\DM\Udm.Res.pas">
+            <Form>dm_Res</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="VIEWS\DM\Udm.UX.pas">
+            <Form>dm_UX</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="VIEWS\DM\Udm.pas">
+            <Form>dm</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="VIEWS\Abs\Base.Main.pas">
+            <Form>BaseMain</Form>
+        </DCCReference>
+        <DCCReference Include="UMain.pas">
+            <Form>FrmMain</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="..\API\CMD_Dialect.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -133,7 +150,7 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="DEPLOY\APP\Client.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="..\..\..\Out\Socket\Client\DEPLOY\APP\Client.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Client.exe</RemoteName>
                         <Overwrite>true</Overwrite>

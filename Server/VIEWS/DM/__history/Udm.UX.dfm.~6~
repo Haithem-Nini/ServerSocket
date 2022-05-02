@@ -1,0 +1,33 @@
+object dm_UX: Tdm_UX
+  OldCreateOrder = False
+  Height = 150
+  Width = 215
+  object Menu_Main: TMainMenu
+    Left = 32
+    Top = 6
+    object MenuItem_N5451: TMenuItem
+      Caption = 'About !'
+    end
+  end
+  object PopupMenu_Client: TPopupMenu
+    Left = 120
+    Top = 6
+    object MenuItem_RemoteDevice: TMenuItem
+      Caption = 'Remote Access to this Device'
+    end
+    object MenuItem_StartChatting: TMenuItem
+      Caption = 'Start Chatting with this Device'
+    end
+    object MenuItem_CloseHosting: TMenuItem
+      Caption = 'Close Connection for this Device'
+    end
+  end
+  object SSock_Main: TServerSocket
+    Active = False
+    Port = 0
+    ServerType = stNonBlocking
+    OnClientConnect = SSock_MainClientConnect
+    Left = 32
+    Top = 62
+  end
+end

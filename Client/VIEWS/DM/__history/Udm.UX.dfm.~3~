@@ -1,0 +1,5 @@
+object dm_UX: Tdm_UX
+  OldCreateOrder = False
+  Height = 150
+  Width = 541
+end

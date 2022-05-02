@@ -4,11 +4,26 @@
     <Transaction>2022/03/25 11:03:01.000.396,=C:\Users\Mr Haithem\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2022/03/25 12:20:00.000.917,=C:\Users\Mr Haithem\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2022/04/23 00:06:00.000.935,=C:\Users\Mr Haithem\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/04/23 00:11:28.000.179,C:\Users\Mr Haithem\Desktop\Socket_Connect\Main.pas=C:\Users\Mr Haithem\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/04/23 00:11:28.000.179,C:\Users\Mr Haithem\Desktop\Socket_Connect\Main.dfm=C:\Users\Mr Haithem\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2022/04/23 00:13:33.000.410,C:\Users\Mr Haithem\Desktop\Socket_Connect\Client\Client.dproj=C:\Users\Mr Haithem\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2022/04/23 00:16:25.000.561,C:\Users\Mr Haithem\Desktop\Socket_Connect\Client\Main.pas=C:\Users\Mr Haithem\Desktop\Socket_Connect\Main.pas</Transaction>
-    <Transaction>2022/04/23 00:16:25.000.561,C:\Users\Mr Haithem\Desktop\Socket_Connect\Client\Main.dfm=C:\Users\Mr Haithem\Desktop\Socket_Connect\Main.dfm</Transaction>
+    <Transaction>2022/04/23 00:11:28.000.179,C:\Users\Mr Haithem\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Mr Haithem\Desktop\Socket_Connect\Main.dfm</Transaction>
+    <Transaction>2022/04/23 00:11:28.000.179,C:\Users\Mr Haithem\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Mr Haithem\Desktop\Socket_Connect\Main.pas</Transaction>
+    <Transaction>2022/04/23 00:13:33.000.410,C:\Users\Mr Haithem\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Mr Haithem\Desktop\Socket_Connect\Client\Client.dproj</Transaction>
+    <Transaction>2022/04/23 00:16:25.000.561,C:\Users\Mr Haithem\Desktop\Socket_Connect\Main.dfm=C:\Users\Mr Haithem\Desktop\Socket_Connect\Client\Main.dfm</Transaction>
+    <Transaction>2022/04/23 00:16:25.000.561,C:\Users\Mr Haithem\Desktop\Socket_Connect\Main.pas=C:\Users\Mr Haithem\Desktop\Socket_Connect\Client\Main.pas</Transaction>
     <Transaction>2022/04/26 18:07:34.000.697,=C:\Users\Mr Haithem\Desktop\Socket_Connect\API\CMD_Dialect.pas</Transaction>
+    <Transaction>2022/05/01 22:08:21.187,=D:\GitHub\Cloned\ServerSocket\Client\Unit1.pas</Transaction>
+    <Transaction>2022/05/02 02:53:44.796,=D:\GitHub\Cloned\ServerSocket\Client\Unit1.pas</Transaction>
+    <Transaction>2022/05/02 02:54:14.427,D:\GitHub\Cloned\ServerSocket\Client\VIEWS\DM\Udm.dfm=D:\GitHub\Cloned\ServerSocket\Client\Unit1.dfm</Transaction>
+    <Transaction>2022/05/02 02:54:14.427,D:\GitHub\Cloned\ServerSocket\Client\VIEWS\DM\Udm.pas=D:\GitHub\Cloned\ServerSocket\Client\Unit1.pas</Transaction>
+    <Transaction>2022/05/02 02:54:30.871,=D:\GitHub\Cloned\ServerSocket\Client\Unit1.pas</Transaction>
+    <Transaction>2022/05/02 02:55:02.133,D:\GitHub\Cloned\ServerSocket\Client\VIEWS\DM\Udm.Res.dfm=D:\GitHub\Cloned\ServerSocket\Client\Unit1.dfm</Transaction>
+    <Transaction>2022/05/02 02:55:02.133,D:\GitHub\Cloned\ServerSocket\Client\VIEWS\DM\Udm.Res.pas=D:\GitHub\Cloned\ServerSocket\Client\Unit1.pas</Transaction>
+    <Transaction>2022/05/02 02:55:19.797,=D:\GitHub\Cloned\ServerSocket\Client\Unit1.pas</Transaction>
+    <Transaction>2022/05/02 02:55:35.959,D:\GitHub\Cloned\ServerSocket\Client\VIEWS\DM\Udm.UX.dfm=D:\GitHub\Cloned\ServerSocket\Client\Unit1.dfm</Transaction>
+    <Transaction>2022/05/02 02:55:35.959,D:\GitHub\Cloned\ServerSocket\Client\VIEWS\DM\Udm.UX.pas=D:\GitHub\Cloned\ServerSocket\Client\Unit1.pas</Transaction>
+    <Transaction>2022/05/02 03:16:48.613,D:\GitHub\Cloned\ServerSocket\Client\VIEWS\Abs\Base.Main.pas=D:\GitHub\Cloned\ServerSocket\Client\Main.pas</Transaction>
+    <Transaction>2022/05/02 03:16:48.613,D:\GitHub\Cloned\ServerSocket\Client\VIEWS\Abs\Base.Main.dfm=D:\GitHub\Cloned\ServerSocket\Client\Main.dfm</Transaction>
+    <Transaction>2022/05/02 03:18:35.819,=D:\GitHub\Cloned\ServerSocket\Client\Unit1.pas</Transaction>
+    <Transaction>2022/05/02 03:19:46.962,D:\GitHub\Cloned\ServerSocket\Client\UMain.pas=D:\GitHub\Cloned\ServerSocket\Client\Unit1.pas</Transaction>
+    <Transaction>2022/05/02 03:19:46.962,D:\GitHub\Cloned\ServerSocket\Client\UMain.dfm=D:\GitHub\Cloned\ServerSocket\Client\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>

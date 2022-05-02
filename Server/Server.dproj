@@ -102,15 +102,32 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="Main.pas">
-            <Form>UMain</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="..\API\CMD_Dialect.pas"/>
-        <DCCReference Include="Remote_Desktop.pas">
-            <Form>URemote_Desktop</Form>
-            <FormType>dfm</FormType>
+        <DCCReference Include="VIEWS\DM\Udm.pas">
+            <Form>dm</Form>
+            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
+        <DCCReference Include="VIEWS\DM\Udm.RES.pas">
+            <Form>dm_Res</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="VIEWS\DM\Udm.UX.pas">
+            <Form>dm_UX</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="VIEWS\Abs\Base.Main.pas">
+            <Form>BaseMain</Form>
+        </DCCReference>
+        <DCCReference Include="UMain.pas">
+            <Form>FrmMain</Form>
+        </DCCReference>
+        <DCCReference Include="VIEWS\Abs\Base.View.pas">
+            <Form>BaseView</Form>
+        </DCCReference>
+        <DCCReference Include="VIEWS\URemote.Desktop.pas">
+            <Form>URemote_Desktop</Form>
+        </DCCReference>
+        <DCCReference Include="API\UServer.Utils.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -137,7 +154,7 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="DEPLOY\APP\Server.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="..\..\..\Out\Socket\Server\DEPLOY\APP\Server.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Server.exe</RemoteName>
                         <Overwrite>true</Overwrite>

@@ -1,0 +1,83 @@
+unit Base.Main;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.ComCtrls,
+  Vcl.Menus,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.StdCtrls,
+  Vcl.Buttons,
+  Vcl.ExtCtrls,
+  System.Win.ScktComp;
+
+type
+  TBase_Main = class(TForm)
+//  {$REGION '  Components ...'}
+  {$REGION ''}
+    Edt_Port: TEdit;
+    Label1: TLabel;
+    Btn_ServerSwitcher: TBitBtn;
+    LV_Clients: TListView;
+    StatusBar_APP: TStatusBar;
+    Pnl_Caption: TPanel;
+    Pnl_Client: TPanel;
+  private
+    fPort: Integer;
+    procedure Set_Port(const Value: Integer);
+    { Private declarations }
+  protected
+  public
+    { Public declarations }
+    procedure UpdateUI(const aValue: Boolean);
+    property Port: Integer Read fPort write Set_Port;
+  end;
+
+//var
+//  Base_Main: TBase_Main;
+
+implementation
+//
+//uses
+//  CMD_Dialect,
+//  URemote.Desktop,
+//  Udm.UX;
+
+{$R *.dfm}
+
+{ TBase_Main }
+
+procedure TBase_Main.Set_Port(const Value: Integer);
+begin
+//  fPort := Value;
+  fPort := StrToInt(Edt_Port.Text);
+end;
+
+procedure TBase_Main.UpdateUI(const aValue: Boolean);
+begin
+  if aValue then
+  begin
+    LV_Clients.Enabled := True;
+    Edt_Port.Enabled := False;
+  //========
+    Btn_ServerSwitcher.Caption := 'Stop Server !';
+    StatusBar_APP.Panels.Items[1].Text := 'Server is Activated , Listening for New comming Connections on the Port: ' + intToStr(Port);
+  end else begin
+    LV_Clients.Clear;
+    LV_Clients.Enabled := False;
+    Edt_Port.Enabled := True;
+  //========
+    Btn_ServerSwitcher.Caption := 'Start Server';
+    StatusBar_APP.Panels.Items[1].Text := 'Server is Stopped';
+  end;
+end;
+
+end.

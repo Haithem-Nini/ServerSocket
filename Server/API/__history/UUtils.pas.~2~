@@ -1,0 +1,17 @@
+unit UUtils;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Classes,
+  Vcl.ComCtrls,
+  System.Win.ScktComp;
+
+
+  procedure Add_ListView_Item(aListView: TListView; aSocket: TCustomWinSocket);
+  procedure Delete_ListView_Item(aListView: TListView; aSocket: TCustomWinSocket);
+
+implementation
+
+end.

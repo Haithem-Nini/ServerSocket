@@ -1,0 +1,70 @@
+unit UMain;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.ComCtrls,
+  Vcl.StdCtrls,
+  Vcl.Buttons,
+  Vcl.ExtCtrls,
+  System.Win.ScktComp,
+// Base ANECTOR
+  Base.Main;
+
+type
+  TFrmMain = class(TBase_Main)
+  private
+    { Private declarations }
+  protected
+    function GetSelf: TBase_Main; override;
+    procedure SetUpdateUI(const aValue: Boolean; const aProc: TProc); override;
+  public
+    { Public declarations }
+  end;
+
+//var
+//  FrmMain: TFrmMain;
+
+implementation
+
+{$R *.dfm}
+
+{ TFrmMain }
+
+function TFrmMain.GetSelf: TBase_Main;
+begin
+  Result := TFrmMain(Self);
+end;
+
+procedure TFrmMain.SetUpdateUI(const aValue: Boolean; const aProc: TProc);
+begin
+  inherited;
+  if aValue then
+  begin
+    aProc;
+//    LV_Clients.Enabled := True;
+//    Edt_Port.Enabled := False;
+//  //========
+//    Btn_ServerSwitcher.Caption := 'Stop Server !';
+//    StatusBar_APP.Panels.Items[1].Text := 'Server is Activated , Listening for New comming Connections on the Port: ' + intToStr(Port);
+  end else begin
+    aProc;
+//    LV_Clients.Clear;
+//    LV_Clients.Enabled := False;
+//    Edt_Port.Enabled := True;
+//  //========
+//    Btn_ServerSwitcher.Caption := 'Start Server';
+//    StatusBar_APP.Panels.Items[1].Text := 'Server is Stopped';
+  end;
+end;
+
+end.
