@@ -1,2 +1,4 @@
 # ServerSocket
-Delphi Client/Server components to communicate using TCP Socket Asynchronous easily
+Delphi Client/Server Demo using Sockets 
+--------
+Patients Manager with Unlimited Updates...
