@@ -60,7 +60,7 @@ end;
 
 procedure Tdm_UX.Act_AutoReconnectExecute(Sender: TObject);
 begin
-  Act_Switcher_Execute(Sender);
+  Timer_AutoReconnect.Enabled := APP.CheckBox_AutoReconnect.Checked;
   APP.StatusBar_APP.Panels.Items[1].Text := 'Client is NOT Connected !!';
 end;
 

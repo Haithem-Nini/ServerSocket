@@ -15,7 +15,6 @@ uses
   Vcl.StdCtrls,
   Vcl.ExtCtrls,
   Vcl.ComCtrls,
-  Vcl.Buttons,
 //
   Base.Main;
 
@@ -27,8 +26,8 @@ type
     { Public declarations }
   end;
 
-//var
-//  FrmMain: TFrmMain;
+var
+  FrmMain: TFrmMain;
 
 implementation
 

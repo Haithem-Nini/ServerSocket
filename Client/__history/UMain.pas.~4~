@@ -27,8 +27,8 @@ type
     { Public declarations }
   end;
 
-//var
-//  FrmMain: TFrmMain;
+var
+  FrmMain: TFrmMain;
 
 implementation
 

@@ -2,7 +2,7 @@ object dm_UX: Tdm_UX
   OldCreateOrder = False
   OnDestroy = DataModuleDestroy
   Height = 164
-  Width = 139
+  Width = 541
   object ActionLst_Client: TActionList
     Left = 48
     Top = 8
@@ -29,7 +29,7 @@ object dm_UX: Tdm_UX
   end
   object Timer_AutoReconnect: TTimer
     Enabled = False
-    Interval = 5000
+    Interval = 10000
     OnTimer = Timer_AutoReconnectTimer
     Left = 48
     Top = 102

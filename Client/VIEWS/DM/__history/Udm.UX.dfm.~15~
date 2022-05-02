@@ -2,7 +2,7 @@ object dm_UX: Tdm_UX
   OldCreateOrder = False
   OnDestroy = DataModuleDestroy
   Height = 164
-  Width = 139
+  Width = 541
   object ActionLst_Client: TActionList
     Left = 48
     Top = 8

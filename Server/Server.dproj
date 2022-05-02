@@ -103,6 +103,7 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="..\API\CMD_Dialect.pas"/>
+        <DCCReference Include="API\UServer.Utils.pas"/>
         <DCCReference Include="VIEWS\DM\Udm.pas">
             <Form>dm</Form>
             <DesignClass>TDataModule</DesignClass>
@@ -127,7 +128,6 @@
         <DCCReference Include="VIEWS\URemote.Desktop.pas">
             <Form>URemote_Desktop</Form>
         </DCCReference>
-        <DCCReference Include="API\UServer.Utils.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

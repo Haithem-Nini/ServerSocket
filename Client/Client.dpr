@@ -11,8 +11,8 @@ uses
 
 {$R *.res}
 
-//var
-//  FrmMain: TFrmMain;
+var
+  FrmMain: TFrmMain;
 
 begin
   ReportMemoryLeaksOnShutdown := True;
@@ -20,10 +20,9 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(Tdm, dm);
-  Application.CreateForm(TFrmMain, FrmMain);
   { DataBase }
   Application.CreateForm(Tdm_Res, dm_Res);   {  Resources [PNG/WAV/HINT etc..] }
   Application.CreateForm(Tdm_UX, dm_UX);     { UI/UX Engine Unit [ActionList/Animation/BaseEvents/BaseMethodes/ etc...] }
-//  Application.CreateForm(TFrmMain, FrmMain); { MainForm Application => it's the App Container and Should be Empty!! => No Code!! => CleanCode  }
+  Application.CreateForm(TFrmMain, FrmMain); { MainForm Application => it's the App Container and Should be Empty!! => No Code!! => CleanCode  }
   Application.Run;
 end.

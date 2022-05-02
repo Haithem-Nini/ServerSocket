@@ -29,7 +29,7 @@ object BaseMain: TBaseMain
         Width = 50
       end
       item
-        Text = 'Client is NOT Connected !!'
+        Text = 'Client is not Activated'
         Width = 100
       end>
     ParentBiDiMode = False
@@ -253,7 +253,7 @@ object BaseMain: TBaseMain
             Width = 392
             Height = 17
             Cursor = crHandPoint
-            Action = dm_UX.Act_AutoReconnect
+            Caption = 'Auto reconnect'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -15

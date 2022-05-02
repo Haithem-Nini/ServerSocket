@@ -60,8 +60,7 @@ end;
 
 procedure Tdm_UX.Act_AutoReconnectExecute(Sender: TObject);
 begin
-  Act_Switcher_Execute(Sender);
-  APP.StatusBar_APP.Panels.Items[1].Text := 'Client is NOT Connected !!';
+  Timer_AutoReconnect.Enabled := APP.CheckBox_AutoReconnect.Checked;
 end;
 
 procedure Tdm_UX.Act_Switcher_Execute(Sender: TObject);
@@ -73,10 +72,8 @@ end;
 
 procedure Tdm_UX.CSock_MainConnect(Sender: TObject; Socket: TCustomWinSocket);
 begin
-  Timer_AutoReconnect.Enabled := False;
   APP.StatusBar_APP.Panels.Items[1].Text := 'Client is Connected on Server IP: ' +Socket.LocalAddress;
   APP.Btn_Connect.Enabled:= True;
-
 end;
 
 procedure Tdm_UX.CSock_MainConnecting(Sender: TObject;
@@ -89,13 +86,12 @@ end;
 procedure Tdm_UX.CSock_MainDisconnect(Sender: TObject;
   Socket: TCustomWinSocket);
 begin
-  APP.StatusBar_APP.Panels.Items[1].Text := 'Client is Disconnected';
+  APP.StatusBar_APP.Panels.Items[1].Text := 'Client is Stopped';
 //==========
-  APP.Btn_Connect.Caption := 'Connect to the Server';
+  APP.Btn_Connect.Caption := 'Start Client';
   APP.Edt_Port.Enabled:= True;
   APP.Edt_Host.Enabled:= True;
   APP.Btn_Connect.Tag := 0;
-  Timer_AutoReconnect.Enabled := True;
 end;
 
 procedure Tdm_UX.CSock_MainError(Sender: TObject; Socket: TCustomWinSocket;
@@ -105,7 +101,7 @@ begin
   APP.StatusBar_APP.Panels.Items[1].Text := 'Connection Error !!';
 //==========
   APP.Btn_Connect.Enabled:= True;
-  APP.Btn_Connect.Caption := 'Connect to the Server';
+  APP.Btn_Connect.Caption := 'Start Client';
   APP.Edt_Port.Enabled:= True;
   APP.Edt_Host.Enabled:= True;
   APP.Btn_Connect.Tag := 0;
@@ -113,7 +109,7 @@ end;
 
 procedure Tdm_UX.CSock_MainRead(Sender: TObject; Socket: TCustomWinSocket);
 var
-  StrCommand: AnsiString;
+  StrCommand: string;
 begin
   StrCommand := Socket.ReceiveText;
 //=======
