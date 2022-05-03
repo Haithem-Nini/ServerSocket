@@ -104,6 +104,7 @@
         </DelphiCompile>
         <DCCReference Include="..\API\CMD_Dialect.pas"/>
         <DCCReference Include="API\UServer.Utils.pas"/>
+        <DCCReference Include="API\UServer.ClientTasks.pas"/>
         <DCCReference Include="VIEWS\DM\Udm.pas">
             <Form>dm</Form>
             <DesignClass>TDataModule</DesignClass>

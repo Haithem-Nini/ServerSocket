@@ -102,6 +102,7 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <DCCReference Include="API\UAnimation.pas"/>
         <DCCReference Include="..\API\CMD_Dialect.pas"/>
         <DCCReference Include="VIEWS\DM\Udm.Res.pas">
             <Form>dm_Res</Form>
@@ -122,6 +123,14 @@
         </DCCReference>
         <DCCReference Include="UMain.pas">
             <Form>FrmMain</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="VIEWS\Abs\Base.VIEW.pas">
+            <Form>BaseView</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="VIEWS\UDisplay.pas">
+            <Form>FrmDisplay</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

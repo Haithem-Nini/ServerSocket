@@ -21,20 +21,23 @@
     <Transaction>2022/05/01 21:42:56.000.844,D:\GitHub\Cloned\ServerSocket\Server\VIEWS\DM\Udm.pas=D:\GitHub\Cloned\ServerSocket\Server\Unit1.pas</Transaction>
     <Transaction>2022/05/01 21:42:56.000.844,D:\GitHub\Cloned\ServerSocket\Server\VIEWS\DM\Udm.dfm=D:\GitHub\Cloned\ServerSocket\Server\Unit1.dfm</Transaction>
     <Transaction>2022/05/01 21:43:11.000.899,=D:\GitHub\Cloned\ServerSocket\Server\Unit1.pas</Transaction>
-    <Transaction>2022/05/01 21:43:36.000.453,D:\GitHub\Cloned\ServerSocket\Server\VIEWS\DM\Udm.UX.dfm=D:\GitHub\Cloned\ServerSocket\Server\Unit1.dfm</Transaction>
     <Transaction>2022/05/01 21:43:36.000.453,D:\GitHub\Cloned\ServerSocket\Server\VIEWS\DM\Udm.UX.pas=D:\GitHub\Cloned\ServerSocket\Server\Unit1.pas</Transaction>
-    <Transaction>2022/05/01 21:48:11.000.194,D:\GitHub\Cloned\ServerSocket\Server\VIEWS\Abs\Base.Main.dfm=D:\GitHub\Cloned\ServerSocket\Server\Main.dfm</Transaction>
+    <Transaction>2022/05/01 21:43:36.000.453,D:\GitHub\Cloned\ServerSocket\Server\VIEWS\DM\Udm.UX.dfm=D:\GitHub\Cloned\ServerSocket\Server\Unit1.dfm</Transaction>
     <Transaction>2022/05/01 21:48:11.000.194,D:\GitHub\Cloned\ServerSocket\Server\VIEWS\Abs\Base.Main.pas=D:\GitHub\Cloned\ServerSocket\Server\Main.pas</Transaction>
+    <Transaction>2022/05/01 21:48:11.000.194,D:\GitHub\Cloned\ServerSocket\Server\VIEWS\Abs\Base.Main.dfm=D:\GitHub\Cloned\ServerSocket\Server\Main.dfm</Transaction>
     <Transaction>2022/05/01 21:52:01.000.582,=D:\GitHub\Cloned\ServerSocket\Server\Unit1.pas</Transaction>
     <Transaction>2022/05/01 21:52:22.000.519,D:\GitHub\Cloned\ServerSocket\Server\UMain.dfm=D:\GitHub\Cloned\ServerSocket\Server\Unit1.dfm</Transaction>
     <Transaction>2022/05/01 21:52:22.000.519,D:\GitHub\Cloned\ServerSocket\Server\UMain.pas=D:\GitHub\Cloned\ServerSocket\Server\Unit1.pas</Transaction>
     <Transaction>2022/05/01 22:08:36.000.859,=D:\GitHub\Cloned\ServerSocket\Server\Unit1.pas</Transaction>
-    <Transaction>2022/05/01 22:08:57.000.071,D:\GitHub\Cloned\ServerSocket\Server\VIEWS\Abs\Base.View.dfm=D:\GitHub\Cloned\ServerSocket\Server\Unit1.dfm</Transaction>
     <Transaction>2022/05/01 22:08:57.000.071,D:\GitHub\Cloned\ServerSocket\Server\VIEWS\Abs\Base.View.pas=D:\GitHub\Cloned\ServerSocket\Server\Unit1.pas</Transaction>
+    <Transaction>2022/05/01 22:08:57.000.071,D:\GitHub\Cloned\ServerSocket\Server\VIEWS\Abs\Base.View.dfm=D:\GitHub\Cloned\ServerSocket\Server\Unit1.dfm</Transaction>
     <Transaction>2022/05/01 22:23:27.000.413,D:\GitHub\Cloned\ServerSocket\Server\VIEWS\URemote.Desktop.pas=D:\GitHub\Cloned\ServerSocket\Server\Remote_Desktop.pas</Transaction>
     <Transaction>2022/05/01 22:23:27.000.413,D:\GitHub\Cloned\ServerSocket\Server\VIEWS\URemote.Desktop.dfm=D:\GitHub\Cloned\ServerSocket\Server\Remote_Desktop.dfm</Transaction>
     <Transaction>2022/05/01 22:55:45.000.081,=D:\GitHub\Cloned\ServerSocket\Server\Unit1.pas</Transaction>
     <Transaction>2022/05/01 22:56:31.000.750,D:\GitHub\Cloned\ServerSocket\Server\API\UUtils.pas=D:\GitHub\Cloned\ServerSocket\Server\Unit1.pas</Transaction>
     <Transaction>2022/05/01 23:10:03.000.106,D:\GitHub\Cloned\ServerSocket\Server\API\UServer.Utils.pas=D:\GitHub\Cloned\ServerSocket\Server\API\UUtils.pas</Transaction>
+    <Transaction>2022/05/02 06:08:54.537,=D:\GitHub\Cloned\ServerSocket\Server\Unit1.pas</Transaction>
+    <Transaction>2022/05/02 06:09:54.134,D:\GitHub\Cloned\ServerSocket\Server\API\UServer.ClientsShifter.pas=D:\GitHub\Cloned\ServerSocket\Server\Unit1.pas</Transaction>
+    <Transaction>2022/05/02 06:35:47.484,D:\GitHub\Cloned\ServerSocket\Server\API\UServer.ClientTasks.pas=D:\GitHub\Cloned\ServerSocket\Server\API\UServer.ClientsShifter.pas</Transaction>
   </Transactions>
 </BorlandProject>

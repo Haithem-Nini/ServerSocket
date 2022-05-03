@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils,
   System.Classes,
-  Vcl.ComCtrls, // Uses TListView
+  Vcl.ComCtrls,
   System.Win.ScktComp;
 
 type

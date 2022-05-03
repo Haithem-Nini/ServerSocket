@@ -12,7 +12,7 @@ object dm_UX: Tdm_UX
     end
     object Act_AutoReconnect: TAction
       Caption = 'Auto Reconnect'
-      OnExecute = Act_AutoReconnectExecute
+      OnExecute = Act_AutoReconnect_Execute
     end
   end
   object CSock_Main: TClientSocket

@@ -1,0 +1,19 @@
+unit UServer.ClientTasks;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Classes,
+  System.Generics.Collections,
+  System.Win.ScktComp;
+
+type
+  TClienTasks  = class
+
+  end;
+
+
+implementation
+
+end.

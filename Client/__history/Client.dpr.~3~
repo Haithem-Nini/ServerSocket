@@ -1,14 +1,12 @@
-program Server;
+program Client;
 
 uses
   Vcl.Forms,
   CMD_Dialect in '..\API\CMD_Dialect.pas',
-  Udm in 'VIEWS\DM\Udm.pas' {dm: TDataModule},
-  Udm.RES in 'VIEWS\DM\Udm.RES.pas' {dm_Res: TDataModule},
+  Udm.Res in 'VIEWS\DM\Udm.Res.pas' {dm_Res: TDataModule},
   Udm.UX in 'VIEWS\DM\Udm.UX.pas' {dm_UX: TDataModule},
-  Base.Main in 'VIEWS\Abs\Base.Main.pas' {Base_Main},
-  Base.View in 'VIEWS\Abs\Base.View.pas' {BaseView},
-  URemote.Desktop in 'VIEWS\URemote.Desktop.pas' {URemote_Desktop},
+  Udm in 'VIEWS\DM\Udm.pas' {dm: TDataModule},
+  Base.Main in 'VIEWS\Abs\Base.Main.pas' {BaseMain},
   UMain in 'UMain.pas' {FrmMain};
 
 {$R *.res}

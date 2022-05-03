@@ -1,0 +1,5 @@
+inherited BaseView1: TBaseView1
+  Caption = 'BaseView1'
+  PixelsPerInch = 96
+  TextHeight = 13
+end

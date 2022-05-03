@@ -4,7 +4,6 @@ uses
   Vcl.Forms,
   CMD_Dialect in '..\API\CMD_Dialect.pas',
   UServer.Utils in 'API\UServer.Utils.pas',
-  UServer.ClientTasks in 'API\UServer.ClientTasks.pas',
   Udm in 'VIEWS\DM\Udm.pas' {dm: TDataModule},
   Udm.RES in 'VIEWS\DM\Udm.RES.pas' {dm_Res: TDataModule},
   Udm.UX in 'VIEWS\DM\Udm.UX.pas' {dm_UX: TDataModule},

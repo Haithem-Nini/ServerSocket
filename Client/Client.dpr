@@ -2,12 +2,15 @@ program Client;
 
 uses
   Vcl.Forms,
+  UAnimation in 'API\UAnimation.pas',
   CMD_Dialect in '..\API\CMD_Dialect.pas',
   Udm.Res in 'VIEWS\DM\Udm.Res.pas' {dm_Res: TDataModule},
   Udm.UX in 'VIEWS\DM\Udm.UX.pas' {dm_UX: TDataModule},
   Udm in 'VIEWS\DM\Udm.pas' {dm: TDataModule},
   Base.Main in 'VIEWS\Abs\Base.Main.pas' {BaseMain},
-  UMain in 'UMain.pas' {FrmMain};
+  UMain in 'UMain.pas' {FrmMain},
+  Base.VIEW in 'VIEWS\Abs\Base.VIEW.pas' {BaseView},
+  UDisplay in 'VIEWS\UDisplay.pas' {FrmDisplay};
 
 {$R *.res}
 

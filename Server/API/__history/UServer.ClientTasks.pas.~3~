@@ -1,0 +1,27 @@
+unit UServer.ClientTasks;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Classes,
+  System.Generics.Collections,
+  System.Win.ScktComp;
+
+type
+  TTasks = (tService_1, tService_2, tService_3); // Just an example!!
+
+  TClienTasks  = class
+  private
+    fID: NativeUInt;
+
+  protected
+
+  public
+
+  end;
+
+
+implementation
+
+end.
