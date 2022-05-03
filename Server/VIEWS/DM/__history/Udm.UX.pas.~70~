@@ -5,12 +5,13 @@ interface
 uses
   System.SysUtils,
   System.Classes,
-  Vcl.Menus,
   System.Actions,
+  Vcl.Menus,
+  Vcl.Forms,
   Vcl.ActnList,
   System.Win.ScktComp,
   UServer.Utils,
-  Vcl.Forms,
+//
   Base.Main;
 
 type
@@ -37,14 +38,14 @@ type
     procedure MenuItem_AboutClick(Sender: TObject);
   {$ENDREGION}
   private
-    fListView: TLV_Server_Item;
+    fLV_CRUD: TLV_Server_CRUD;
     fClient: TCustomWinSocket;
     { Private declarations }
-    function GetMainForm: TBase_Main;
+    function GetMainForm: TBaseMain;
     procedure Server_Switcher(aServer: TServerSocket);
   public
     { Public declarations }
-    property App: TBase_Main read GetMainForm; // ReadOnly ..!!
+    property App: TBaseMain read GetMainForm; // ReadOnly ..!!
   end;
 
 var
@@ -52,13 +53,16 @@ var
 
 implementation
 
+uses
+  Vcl.Dialogs;
+
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
 
-function Tdm_UX.GetMainForm: TBase_Main;
+function Tdm_UX.GetMainForm: TBaseMain;
 begin
-  Result := (Application.MainForm as TBase_Main);
+  Result := (Application.MainForm as TBaseMain);
 end;
 
 procedure Tdm_UX.Act_DeleteClient_Execute(Sender: TObject);
@@ -103,10 +107,10 @@ begin
   begin
     aServer.Port   := App.Port;
     aServer.Active := True;
-//    App.UpdateUI[False];
+    App.UpdateUI(True);
   end else begin
     aServer.Active := False;
-//    App.UpdateUI[True];
+    App.UpdateUI(False);
   end;
 end;
 {$ENDREGION}
@@ -114,12 +118,12 @@ end;
 {$REGION '  Server On Client''s is (Connect/Disconnect) Events ..'}
 procedure Tdm_UX.SSock_MainClientConnect(Sender: TObject; Socket: TCustomWinSocket);
 begin
-  fListView.Add_ListView_Item(App.LV_Clients, Socket);
+  fLV_CRUD.Add_ListView_Item(App.LV_Clients, Socket);
 end;
 
 procedure Tdm_UX.SSock_MainClientDisconnect(Sender: TObject; Socket: TCustomWinSocket);
 begin
-  fListView.Delete_ListView_Item(App.LV_Clients, Socket);
+  fLV_CRUD.Delete_ListView_Item(App.LV_Clients, Socket);
 end;
 {$ENDREGION}
 

@@ -54,7 +54,7 @@ var
 implementation
 
 uses
-  Vcl.Dialogs;
+  Vcl.Dialogs, CMD_Dialect;
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
@@ -77,7 +77,7 @@ begin
      fClient := SSock_Main.Socket.Connections[i];
      if fClient.RemoteAddress = App.LV_Clients.Selected.SubItems[1] then
       begin
-       fClient.SendText('22');
+       fClient.SendText(CMD_CLOSE);
        //fMainRef.LV_Clients.Selected.Delete ;
        break;
       end;

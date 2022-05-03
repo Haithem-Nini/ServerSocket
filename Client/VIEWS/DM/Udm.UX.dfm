@@ -30,7 +30,7 @@ object dm_UX: Tdm_UX
   object Timer_AutoReconnect: TTimer
     Enabled = False
     Interval = 5000
-    OnTimer = Timer_AutoReconnectTimer
+    OnTimer = Timer_AutoReconnect_Timer
     Left = 48
     Top = 102
   end

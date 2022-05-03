@@ -22,7 +22,7 @@ type
     Act_AutoReconnect: TAction;
   {$ENDREGION}
     procedure Act_Switcher_Execute(Sender: TObject);
-    procedure Timer_AutoReconnectTimer(Sender: TObject);
+    procedure Timer_AutoReconnect_Timer(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
     procedure CSock_MainRead(Sender: TObject; Socket: TCustomWinSocket);
     procedure CSock_MainError(Sender: TObject; Socket: TCustomWinSocket;
@@ -47,11 +47,14 @@ var
 implementation
 
 uses
-  Vcl.Forms, UAnimation;
+  Vcl.Forms, UAnimation, CMD_Dialect;
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+var
+  FromDestroy: Boolean = False;
 
 function Tdm_UX.GetMainForm: TBaseMain;
 begin
@@ -97,13 +100,20 @@ end;
 procedure Tdm_UX.CSock_MainDisconnect(Sender: TObject;
   Socket: TCustomWinSocket);
 begin
-  APP.StatusBar_APP.Panels.Items[1].Text := 'Client is Disconnected';
-//==========
-  Act_Switcher.Caption := 'Connect to the Server';
-  APP.Edt_Port.Enabled := True;
-  APP.Edt_Host.Enabled := True;
-  APP.Btn_Connect.Tag  := 0;
-  Timer_AutoReconnect.Enabled := True;
+  Timer_AutoReconnect.Enabled := False;
+  if Not FromDestroy then begin
+    if APP.CheckBox_AutoReconnect.Checked then begin
+      APP.StatusBar_APP.Panels.Items[1].Text := 'Client is Disconnected !! (Reconnect After 5 Sec) !!';
+      Timer_AutoReconnect.Enabled := True;
+    end else
+      APP.StatusBar_APP.Panels.Items[1].Text := 'Client is Disconnected';
+  //==========
+    Act_Switcher.Caption := 'Connect to the Server';
+    APP.Edt_Port.Enabled := True;
+    APP.Edt_Host.Enabled := True;
+  end;
+
+
 end;
 
 procedure Tdm_UX.CSock_MainError(Sender: TObject; Socket: TCustomWinSocket;
@@ -113,11 +123,11 @@ begin
   if APP.CheckBox_AutoReconnect.Checked then APP.StatusBar_APP.Panels.Items[1].Text := 'Connection Error !! (Reconnect After 5 Sec) !!' else
     APP.StatusBar_APP.Panels.Items[1].Text := 'Connection Error !!';
 //==========
-  APP.Btn_Connect.Enabled:= True;
+  Act_Switcher.Enabled:= True;
   Act_Switcher.Caption := 'Connect to the Server';
   APP.Edt_Port.Enabled := True;
   APP.Edt_Host.Enabled := True;
-  APP.Btn_Connect.Tag  := 0;
+
 end;
 
 procedure Tdm_UX.CSock_MainRead(Sender: TObject; Socket: TCustomWinSocket);
@@ -126,7 +136,7 @@ var
 begin
   StrCommand := Socket.ReceiveText;
 //=======
-  if StrCommand = '22' then
+  if StrCommand = CMD_CLOSE then
   begin
     CSock_Main.Active := False;
   end;
@@ -135,11 +145,11 @@ end;
 
 procedure Tdm_UX.DataModuleDestroy(Sender: TObject);
 begin
+  FromDestroy := True;
   if CSock_Main.Active then CSock_Main.Active := False;
 end;
 
-
-procedure Tdm_UX.Timer_AutoReconnectTimer(Sender: TObject);
+procedure Tdm_UX.Timer_AutoReconnect_Timer(Sender: TObject);
 begin
  if not (CSock_Main.Active)and(APP.CheckBox_AutoReconnect.Checked) then
     CSock_Main.Active := True;

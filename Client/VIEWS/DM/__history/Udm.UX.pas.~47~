@@ -47,7 +47,7 @@ var
 implementation
 
 uses
-  Vcl.Forms;
+  Vcl.Forms, UAnimation;
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
@@ -61,8 +61,13 @@ end;
 procedure Tdm_UX.Act_AutoReconnect_Execute(Sender: TObject);
 begin
   if not (CSock_Main.Active) then begin
-    APP.StatusBar_APP.Panels.Items[1].Text := 'Client is NOT Connected !! (Auto-Reconnect is Activated !!';
-    Act_Switcher_Execute(Sender);
+    APP.StatusBar_APP.Panels.Items[1].Text := '(Auto-Reconnect is Activated) ReConnecting After 5 Seconds.. !!';
+    Act_Switcher.Enabled := False;
+    Wait(5000,
+      procedure begin
+        Act_Switcher_Execute(Sender); // Connect Action..
+      end);
+
   end;
 
 end;
@@ -105,7 +110,8 @@ procedure Tdm_UX.CSock_MainError(Sender: TObject; Socket: TCustomWinSocket;
   ErrorEvent: TErrorEvent; var ErrorCode: Integer);
 begin
   ErrorCode := 0;
-  APP.StatusBar_APP.Panels.Items[1].Text := 'Connection Error !!';
+  if APP.CheckBox_AutoReconnect.Checked then APP.StatusBar_APP.Panels.Items[1].Text := 'Connection Error !! (Reconnect After 5 Sec) !!' else
+    APP.StatusBar_APP.Panels.Items[1].Text := 'Connection Error !!';
 //==========
   APP.Btn_Connect.Enabled:= True;
   Act_Switcher.Caption := 'Connect to the Server';
